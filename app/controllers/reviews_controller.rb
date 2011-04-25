@@ -15,7 +15,6 @@ class ReviewsController < ApplicationController
   # GET /reviews/1.xml
   def show
     @review = Review.find(params[:id])
-    @genres = @review.genres.all
 	
     respond_to do |format|
       format.html # show.html.erb

@@ -2,7 +2,7 @@
 
 <% @reviews.each do |review| %>
   <article>
-    <time><%= review.created_at.strftime("%d-%m-%Y") %></time>
+    <time><%= review.created_at.strftime("%d.%m.%Y") %></time>
   	<h2><%= review.title %></h2>
   	<p><%= review.ingress %></p>
   	<%= link_to 'Show', review %>

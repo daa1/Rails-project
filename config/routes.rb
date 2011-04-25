@@ -1,6 +1,6 @@
 DigUnder::Application.routes.draw do
   resources :users
-
+  resources :genres
   resources :reviews do
     resources :comments
   end

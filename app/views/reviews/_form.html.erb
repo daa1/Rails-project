@@ -27,6 +27,13 @@
     <%= f.label :grade %><br />
     <%= select_tag(:grade, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]])) %>
   </div>
+  <div class="field">
+  <%= f.label "Genres" %>
+  <% for genre in Genre.all %>
+    <%= check_box_tag 'review[genre_ids][]', genre.id, @review.genre_ids.include?(genre.id), :id => dom_id(genre) %>
+    <%= label_tag dom_id(genre), genre.name, :class => "check_box_label" %>
+  <% end %>	
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

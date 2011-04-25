@@ -9,18 +9,15 @@
   <b>Body:</b>
   <%= @review.body %>
 </p>
-<p>
+<p>	
   <b>Ingress:</b>
   <%= @review.ingress %>
 </p>
 
-
-<p>NYYY</p>
-<% @genres.each do |genre| %>
-<p><%= genre.name %></p>
-
-<% end %>
-
-
+<ul class='genres'>
+<% for genre in Genre.all.sort_by { |g| g.name} %>
+  <li <% if @review.genre_ids.include?(genre.id) %>class='active'<% end %>><%= genre.name %></li>
+<% end %>	
+</ul>
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
