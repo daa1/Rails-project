@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @review.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @review.body %>
+</p>
+<p>
+  <b>Ingress:</b>
+  <%= @review.ingress %>
+</p>
+
+
+<p>NYYY</p>
+<% @genres.each do |genre| %>
+<p><%= genre.name %></p>
+
+<% end %>
+
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
