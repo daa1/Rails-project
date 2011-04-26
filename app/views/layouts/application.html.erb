@@ -7,14 +7,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <nav>
+  <h1 class="header">DIGital UNDERholdning</h1>
+  <nav class="menu">
   	<ul>
-  	  <li>En</li>
-  	  <li>To</li>
-  	  <li>Tre</li>
+  	  <li><a href="#" class="computer" title="Spillanmeldelser"></a></li>
+  	  <li><a href="#" class="video" title="Filmanmeldelser"></a></li>
   	</ul>
   </nav>
-  <section>
+  <section class="main">
     <%= yield %>
   </section>
 </body>
