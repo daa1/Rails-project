@@ -3,11 +3,13 @@
 <% @reviews.each do |review| %>
   <article>
     <time><%= review.created_at.strftime("%d.%m.%Y") %></time>
-  	<h2><%= review.title %></h2>
+  	<h2><%= link_to review.title, review %></h2>
+  	<span class="edit-pane">
+    	<%= link_to 'Edit', edit_review_path(review) %>
+    	<%= link_to 'Destroy', review, :confirm => 'Are you sure?', :method => :delete %>
+    </span>
   	<p><%= review.ingress %></p>
-  	<%= link_to 'Show', review %>
-    <%= link_to 'Edit', edit_review_path(review) %>
-    <%= link_to 'Destroy', review, :confirm => 'Are you sure?', :method => :delete %>
+  	<%= link_to 'Les mer', review %>
   </article>
 <% end %>
 

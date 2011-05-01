@@ -55,8 +55,6 @@ div.field, div.actions {
   list-style: square;
 }
 
-article { display:block;border-bottom:1px solid black;margin-bottom:10px;padding-bottom:10px; }
-
 .genres { list-style:none;padding:0;margin:0;overflow:hidden;width:300px; }
 .genres li { float:left;width:96px;height:30px;text-align:center;border:1px solid black;margin:2px 2px 0 0; }
 .genres li.active { background:red; }
@@ -65,10 +63,11 @@ body { padding:0;margin:0; }
 
 /* border:5px solid black;border-left:none;-moz-border-radius-topright: 15px;-moz-border-radius-bottomright: 15px; */
 
-h1.header { font-family:'ElsewhereBRKRegular';font-size:5em;margin-left:160px; }
+h1.header { font-family:'ElsewhereBRKRegular';font-size:5em;margin-left:160px;text-shadow:-3px 4px #ccc; }
 
-nav.menu { position:fixed;left:0;top:0;width:0;border:10px solid black;-moz-border-radius-bottomright:15px;border-bottom-right-radius: 15px; }
+nav.menu { position:fixed;left:0;top:0;width:0;border:10px solid black;-moz-border-radius-bottomright:15px;border-bottom-right-radius: 15px;-moz-box-shadow: -2px -3px 10px #000;-webkit-box-shadow: -2px -3px 10px #000;box-shadow: -2px -3px 10px #000;}
 nav.menu ul { list-style:none;padding-left:10px;margin:100px 0;width:64px; }
+nav.menu ul li a { -moz-box-shadow: -2px 1px 8px #000;-webkit-box-shadow: -2px 1px 8px #000;;box-shadow: -2px 1px 8px #000; }
 nav.menu ul li:first-child a { -moz-border-radius-topright: 15px;border-top-right-radius:15px; }
 nav.menu ul li:last-child a { border-bottom:5px solid black;-moz-border-radius-bottomright:15px;border-bottom-right-radius:15px; }
 nav.menu ul li a { display:block;height:64px;width:64px;border:5px solid black;border-left:none;border-bottom:none; }
@@ -78,7 +77,7 @@ nav.menu ul li a.computer:hover { background: #c8c8c8 url('../images/Computer.pn
 nav.menu ul li a.video:hover { background: #c8c8c8 url('../images/Videos.png') no-repeat; }
 
 
-section.main { display:block;float:left;width:450px;margin-left:160px; }
+section.main { display:block;width:450px;margin-left:160px; }
 article { display:block; }
 
 @font-face {
@@ -90,5 +89,13 @@ article { display:block; }
          url('../fonts/elsewher-webfont.svg#ElsewhereBRKRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
+
+article { display:block;margin-bottom:10px;padding-bottom:10px;-moz-box-shadow: 5px 5px 5px #ccc;-webkit-box-shadow: 5px 5px 5px #ccc;box-shadow: 5px 5px 5px #ccc; }
+article time { display:block;font-size:0.8em;margin-bottom:-4px; }
+article h2 { display:inline; }
+article h2 a { text-decoration:none; }
+article h2 a:hover { text-decoration:underline;background:none;color:#333333; }
+article .edit-pane { display:none; }
+article:hover .edit-pane { display:inline; }
